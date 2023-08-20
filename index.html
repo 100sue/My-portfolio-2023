@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script 
+    type="module" 
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+    <script 
+    nomodule
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+    </script>
+    
+    <title>My Portfolio - trend 2023</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">APPERT Design</div>
+        <ul class="nav">
+            <li class="nav-list"><a href="#home">Home</a></li>
+            <li class="nav-list"><a href="#about">About</a></li>
+            <li class="nav-list"><a href="#skill">Skill</a></li>
+            <li class="nav-list"><a href="#works">Works</a></li>
+            <li class="nav-list"><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="home">
+                <div class="home-left">
+                    <h2 class="home-left-title">
+                        Hello, I'M<br>
+                        Roland APPERT
+                    </h2>
+                    <p class="home-left-text">I'm a Front-End Web Developer</p>
+                </div>
+                <div class="home-right">
+                    <ul class="home-icon">
+                        <li>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>
+                                <i class="fa-brands fa-html5"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>
+                                <i class="fa-brands fa-js"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>
+                                <i class="fa-brands fa-node-js"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>
+                                <i class="fa-brands fa-vuejs"></i>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <span class="heading">home</span>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about">
+                <span class="heading">about</span>
+            </div>
+        </section>
+
+        <section id="skill">
+            <div class="skill" >
+                <span class="heading">skill</span>
+            </div>
+        </section>
+
+        <section id="works">
+            <div class="works">
+                <span class="heading">works</span>
+            </div>
+        </section>
+
+        <section id="contact">
+                <div class="form-box">
+                    <h1 class="form-title">Contact</h1>
+                    <div class="form-bg">
+                        <form id="form">
+                            <div class="form-content">
+                                <div class="email-box">
+                                    <label for="email" class="email-title">E-mail</label>
+                                    <input type="email" id="email" name="email" placeholder="E-mail destination, exra.httpp@gmail.com" class="email-input">
+                                </div>
+                                <div class="subject-box">
+                                    <label for="subject" class="subject-title">Subject:</label>
+                                    <input type="text" id="subject" name="subject" placeholder="Subject E-mail" class="subject-input">
+                                </div>
+                                <div class="message-box">
+                                    <label for="message" class="message-title">Message:</label>
+                                    <textarea type="text" id="message" name="message" placeholder="E-mail Message" class="message-input"></textarea>
+                                </div>
+                                <div id="buttons">
+                                    <button type="submit" class="send-button" disabled >Send</button>
+                                    <button type="reset" class="reset-button" >Reset</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <model-viewer 
+                 class="robo"
+                 src="./models/robot_playground/scene.gltf"
+                 camera-controls
+                 disable-pan
+                 disable-zoom
+                 interaction-prompt="none"
+                 field-of-view="10deg"
+                 autoplay="experiment_object_159"
+                ></model-viewer>
+            </section>
+
+    </main>
+
+
+
+    
+<script src="main.js"></script>
+</body>
+</html>
