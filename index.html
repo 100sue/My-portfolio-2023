@@ -20,6 +20,7 @@
     <title>My Portfolio - trend 2023</title>
   </head>
   <body>
+    
     <header>
       <div class="logo">APPERT Design</div>
       <ul class="nav">
@@ -31,15 +32,24 @@
       </ul>
     </header>
 
-    <main>
+    <main id="particles-js">
       <section id="home">
         <div class="home">
           <div class="home-left">
             <h2 class="home-left-title">
-              Hello, I'M<br />
+              Hello, I'm<br />
               Roland APPERT
             </h2>
-            <p class="home-left-text">I'm a Front-End Web Developer</p>
+            <div class="change-text">
+              <h3>And, I'm a </h3>
+              <h3>
+                <span class="word">&nbsp;UX/UI&nbsp;Developer</span>
+                <span class="word">&nbsp;Web&nbsp;Designer</span>
+                <span class="word">&nbsp;Frontend&nbsp; Developer</span>
+                <span class="word">&nbsp;Backend&nbsp; Developer</span>
+                <span class="word">&nbsp;Prompt&nbsp; Engineer</span>
+              </h3>
+            </div>
             <a href="#contact" class="home-btn">Contact</a>
           </div>
           <div class="home-right">
@@ -112,7 +122,33 @@
 
       <section id="skill">
         <div class="skill">
-          <span class="heading">skill</span>
+          <div class="cards">
+            <div class="card animation">
+                <img class="reactImg" src="./asset/images/logos/kali.png" alt="">
+                <p class="title">Kali linux</p>
+            </div>
+            <div class="card animation">
+                <img class="r3f" src="./asset/images/logos/osint.png" alt="">
+                <p class="title">Osint</p>
+            </div>
+            <div class="card animation">
+                <img class="threeJsImg" src="./asset/images/logos/OpenAI.png" alt="">
+                <p class="title">Open Ai</p>
+            </div>
+            <div class="card animation">
+                <img class="js" src="./asset/images/logos/Stable-Diffusion-Logo.png" alt="">
+                <p class="title">Stable difusion</p>
+            </div>
+            <div class="card animation">
+                <img class="htmlImg" src="./asset/images/logos/blender.png" alt="">
+                <p class="title">Blender</p>
+            </div>
+            <div class="card animation">
+              <img class="htmlImg" src="./asset/images/logos/NuxtJS_Logo.png" alt="">
+              <p class="title">Nuxt</p>
+          </div>
+        </div>
+          <span class="heading">skills</span>
         </div>
       </section>
 
@@ -181,9 +217,10 @@
         ></model-viewer>
       </section>
     </main>
-
+    <script src="particles.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="main.js"></script>
+    
   </body>
 </html>
