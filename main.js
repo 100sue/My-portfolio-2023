@@ -1,4 +1,7 @@
 // Gsap: Timeline
+// Gsap Home
+
+
 
 let textLogo = document.querySelector('.logo')
 const tl = gsap.timeline({
@@ -11,6 +14,8 @@ textLogo.innerHTML = textLogo.textContent.replace(
     /\S/g,
     "<span class='letter'>$&</span>"
 )
+
+
 
 tl.from('.letter', 0.7, {
     y: -50,
@@ -78,20 +83,70 @@ let changeText = () => {
 changeText();
 setInterval(changeText,3000);
 
-// aniamtion cards
-let animation = document.querySelectorAll('.animation');
 
-function showScroll() {
-    let scrollTop = document.documentElement.scrollTop;
-    for (let i = 0; i < animation.length; i++) {
-        let heightAnimation = animation[i].offsetHeight;
-        if(heightAnimation - -450 < scrollTop) {
-            animation[i].style.opacity = 1;
-            animation[i].classList.add("showUp")
-        }
+// Gsap Section: About
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".about-left", {
+    scale:0.82,
+    autoAlpha:0,
+    x:"-100%"
+}, {
+    scale:1,
+    autoAlpha:1,
+    duration:1,
+    x:0,
+    scrollTrigger: {
+        trigger:".about-left",
+        start:"bottom bottom",
+        end:"center center",
+        scrub:1
     }
 }
-window.addEventListener("scroll", showScroll);
+)
+
+
+gsap.utils.toArray(".about-right span").forEach((span) => {
+    gsap.fromTo(span, {
+        letterSpacing: "10px",
+        autoAlpha:0,
+        x:300,
+        skewX:65,
+    },{
+        letterSpacing:"0",
+        autoAlpha:1,
+        w:0,
+        skewX:0,
+        duration:1,
+        scrollTrigger: {
+            trigger: span,
+            scrub:1,
+            start: 'bottom bottom',
+            end: 'center center',
+        }
+    }
+    
+    )
+})
+
+
+
+
+// Animation cards
+//let animation = document.querySelectorAll('.animation');
+
+//function showScroll() {
+   // let scrollTop = document.documentElement.scrollTop;
+    //for (let i = 0; i < animation.length; i++) {
+        //let heightAnimation = animation[i].offsetHeight;
+       // if(heightAnimation - -450 < scrollTop) {
+         //   animation[i].style.opacity = 1;
+          //  animation[i].classList.add("showUp")
+       // }
+   // }
+//}
+//window.addEventListener("scroll", showScroll);
 
 
 // Cursor trail :
